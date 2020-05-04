@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "az": "^0.2.3",
-    "pycollections": "^0.9.0"
+    "natural": "^2.1.3",
+    "pycollections": "^0.9.0",
+    "stopwords-ru": "^0.3.0"
   }
 }

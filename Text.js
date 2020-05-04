@@ -1,4 +1,3 @@
-const Az = require('az')
 const Sentence = require('./Sentence')
 const {Counter} = require('pycollections')
 const natural = require('natural')
@@ -16,6 +15,10 @@ module.exports = class Text {
 	}
 
 	abstract(percent) {
+		if (percent > 100 || percent < 1) {
+			console.error('Percent must be between 1 and 100 (include)')
+			process.exit(1)
+		}
 		let weight = []
 		for (const sentence of this.sentences) {
 			weight.push([sentence, sentence.getWeight(this)])
